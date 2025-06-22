@@ -37,7 +37,7 @@ endif::[]
 :xrefstyle: short
 
 = RISC-V S-mode Physical Memory Protection for Hypervisor
-Editor - Dong Du and Sandro Pinto
+Editor - Dong Du and José Martins
 
 // Preamble
 [WARNING]
