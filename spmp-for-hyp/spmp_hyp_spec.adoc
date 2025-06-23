@@ -16,7 +16,7 @@ This extension introduces a new memory protection layer called Virtual SPMP (vSP
     1. vSPMP check: If the access is permitted by vSPMP, then 
     2. hSPMP check: The access must also be permitted by hSPMP. 
 
-If either vSPMP or hSPMP denies the access, a guest SPMP fault directed at VS-mode is raised using exception codes 12 (instruction), 13 (load), or 15 (store/AMO), in alignment with standard fault code semantics. Implementations may perform vSPMP and hSPMP checks in parallel, provided the overall enforcement behavior matches the sequential logic described above.
+If the vSPMP check or both the vSPMP and hSPMP checks deny a VS/VU access, a standard SPMP page-fault direct at VS-mode is triggered using exception codes  12 (instruction), 13 (load), or 25 (store/AMO), in alignment with standard fault code semantics. If only the hSPMP denies a VS/VU access, a guest page-fault directed at HS-mode is raised using exception codes 20 (instruction), 21 (load), or 23 (store/AMO). Implementations may perform vSPMP and hSPMP checks in parallel, provided the overall enforcement behavior matches the sequential logic described above.
 
 [[hpmp-arch]]
 image::hpmp.png[title="Dual-Stage SPMP",align="center",scaledwidth=22%]
