@@ -5,6 +5,7 @@ The proposed specifications (non-ratified, under discussion) has been contribute
 [%hardbreaks]
 * Bicheng Yang, Editor <bichengyang@sjtu.edu.cn>
 * José Martins, Editor <jose@osyx.tech>
+* Dong Du
 * Sandro Pinto
 * Thomas Roecker
 * Manuel Rodriguez
